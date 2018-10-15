@@ -23,13 +23,13 @@ import "./lib/mui/css/mui.min.css";
 // MUI 扩展图标样式
 import "./lib/mui/css/icons-extra.css";
 
+//安装 图片预览插件
+import VuePreview from "vue-preview";
+Vue.use(VuePreview);
 
-import { Header, Swipe, SwipeItem } from "mint-ui";
-//头部区域
-Vue.component(Header.name, Header);
-//轮播图区域
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
+//安装 mint-ui
+import mint from "mint-ui";
+Vue.use(mint);
 
 import router from "./router.js";
 

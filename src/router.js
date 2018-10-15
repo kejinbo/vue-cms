@@ -9,6 +9,11 @@ import search from "./common/tarbars/search.vue";
 //新闻组件
 import newlist from "./common/news/newslist.vue";
 import newsInfo from "./common/news/newsInfo.vue";
+
+//图片分享模块
+import photoList from "./common/photos/photoList.vue";
+import photoInfo from "./common/photos/photoInfo.vue"
+
 // 3. 创建路由对象
 var router = new VueRouter({
   routes: [
@@ -18,7 +23,9 @@ var router = new VueRouter({
     { path: "/member", component: member },
     { path: "/search", component: search },
     { path: "/home/newslist", component: newlist },
-    { path: "/home/newsInfo/:id", component: newsInfo }
+    { path: "/home/newsInfo/:id", component: newsInfo },
+    { path: "/home/photolist", component: photoList },
+    { path: "/home/photoInfo/:id", component: photoInfo }
   ],
   linkActiveClass: "mui-active"
 });
