@@ -45,7 +45,6 @@ export default {
               element.msrc = element.src;
             });
             this.list = result.body.imgArr.img_Array;
-            console.log(this.list);
           }
         });
     },

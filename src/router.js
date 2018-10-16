@@ -14,6 +14,11 @@ import newsInfo from "./common/news/newsInfo.vue";
 import photoList from "./common/photos/photoList.vue";
 import photoInfo from "./common/photos/photoInfo.vue"
 
+//商品购买区域
+import goodslist from "./common/goods/goodList.vue";
+import goodsinfo from "./common/goods/goodsinfo.vue";
+import goodsdesc from "./common/goods/goodsdesc.vue";
+
 // 3. 创建路由对象
 var router = new VueRouter({
   routes: [
@@ -25,7 +30,10 @@ var router = new VueRouter({
     { path: "/home/newslist", component: newlist },
     { path: "/home/newsInfo/:id", component: newsInfo },
     { path: "/home/photolist", component: photoList },
-    { path: "/home/photoInfo/:id", component: photoInfo }
+    { path: "/home/photoInfo/:id", component: photoInfo },
+    { path: "/home/goodslist/", component: goodslist },
+    { path: "/home/goodsinfo/:id", component: goodsinfo,name:"goodsinfo" },
+    { path: "/home/goodsdesc/:id", component: goodsdesc,name:"goodsdesc" }
   ],
   linkActiveClass: "mui-active"
 });
