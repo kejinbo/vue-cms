@@ -99,7 +99,19 @@ export default {
     },
     //添加到购物车
     addToShopCar() {
+        //显示小球
         this.ballFlag = !this.ballFlag;
+
+        //{ id:商品的id, count: 要购买的数量, price: 商品的单价，selected: false  }
+        //拼接出一个，要保存到store 中car 数组里面的商品信息对象
+        var goodsinfo = {
+            id: this.id,
+            count: this.selectedCount,
+            price: this.goodsinfo.sell_price,
+            selected: true
+        };
+        //调用 store 中的mutations 来讲商品加入购物车 
+        this.$store.commit("addToCar",goodsinfo)
     },
     beforeEnter: el => {
       el.style.transform = "translate(0, 0)";
